@@ -1,0 +1,11 @@
+
+
+.vh-100 {
+  height: 100vh;
+}
+/* Slideshow.css */
+.img-size {
+  max-width: 100%; /* Limit image width to its container */
+  max-height: 906px; /* Limit image height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}

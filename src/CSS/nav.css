@@ -1,0 +1,62 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and links */
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+nav .logo {
+  height: 50px;
+  margin-right: 30px; /* Space between logo and links */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-grow: 0; /* Allow ul to take available space */
+  justify-content: center; /* Center the links horizontally */
+}
+
+nav ul li {
+  margin: 0 70px; /* Space between links */
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none; /* Remove the default underline */
+  position: relative; /* Needed for the ::after pseudo-element */
+  transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+nav ul li a::after {
+  content: ''; /* Empty content for the underline */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Position the underline below the text */
+  height: 2px; /* Thickness of the underline */
+  width: 100%; /* Full width of the text */
+  background-color: #333; /* Color of the underline */
+  transform: scaleX(0); /* Start with the underline scaled to 0 */
+  transform-origin: bottom right; /* Transform origin for scaling */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1); /* Scale the underline to full width on hover */
+  transform-origin: bottom left; /* Transform origin for scaling */
+}
+
+nav ul li a:hover {
+  color: #555; /* Change text color on hover */
+}
+
+  .app-container {
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    text-align: center; /* Center text inside the container */
+  }
+  
